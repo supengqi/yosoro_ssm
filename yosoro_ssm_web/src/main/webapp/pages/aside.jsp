@@ -7,11 +7,11 @@
 		<!-- Sidebar user panel -->
 		<div class="user-panel">
 			<div class="pull-left image">
-				<img src="${pageContext.request.contextPath}/img/user2-160x160.jpg"
+				<img src="${pageContext.request.contextPath}/img/nani.bmp"
 					class="img-circle" alt="User Image">
 			</div>
 			<div class="pull-left info">
-				<p>xxx</p>
+				<p>文贺于</p>
 				<a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
 			</div>
 		</div>

@@ -20,16 +20,16 @@
 
 				<li class="dropdown user user-menu"><a href="#"
 					class="dropdown-toggle" data-toggle="dropdown"> <img
-						src="${pageContext.request.contextPath}/img/user2-160x160.jpg"
+						src="${pageContext.request.contextPath}/img/nani.bmp"
 						class="user-image" alt="User Image"> <span class="hidden-xs">
-							xxx
+							文贺于
 					</span>
 
 				</a>
 					<ul class="dropdown-menu">
 						<!-- User image -->
 						<li class="user-header"><img
-							src="${pageContext.request.contextPath}/img/user2-160x160.jpg"
+							src="${pageContext.request.contextPath}/img/nani.bmp"
 							class="img-circle" alt="User Image"></li>
 
 						<!-- Menu Footer-->

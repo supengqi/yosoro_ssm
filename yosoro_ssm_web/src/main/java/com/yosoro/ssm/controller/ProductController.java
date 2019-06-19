@@ -25,4 +25,10 @@ public class ProductController {
         return mv;
     }
 
+    @RequestMapping("/save.do")
+    public String save(Product product) throws Exception {
+        productService.save(product);
+        return "redirect:findAll.do";
+    }
+
 }

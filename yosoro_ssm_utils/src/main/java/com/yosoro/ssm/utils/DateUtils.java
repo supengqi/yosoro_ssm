@@ -12,7 +12,6 @@ public class DateUtils {
     //日期转换成字符串
     public static String date2String(Date date, String patt) {
         SimpleDateFormat sdf = new SimpleDateFormat(patt);
-        System.out.println(date);
         String format = sdf.format(date);
         return format;
     }
@@ -24,7 +23,4 @@ public class DateUtils {
         return parse;
     }
 
-    public static void main(String[] args) {
-        System.out.println(date2String(new Date(),"yyyy-MM-dd HH:mm:ss"));
-    }
 }
