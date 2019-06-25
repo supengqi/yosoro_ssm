@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib uri="http://www.springframework.org/security/tags" prefix="security"%>
 
 <aside class="main-sidebar">
 	<!-- sidebar: style can be found in sidebar.less -->
@@ -11,7 +12,9 @@
 					class="img-circle" alt="User Image">
 			</div>
 			<div class="pull-left info">
-				<p>文贺于</p>
+				<p>
+					<security:authentication property="principal.username"></security:authentication>
+				</p>
 				<a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
 			</div>
 		</div>
@@ -32,22 +35,34 @@
 			</a>
 				<ul class="treeview-menu">
 
-					<li id="system-setting"><a
+					<li id="system-setting">
+						<security:authorize access="hasRole('ADMIN')">
+						<a
 						href="${pageContext.request.contextPath}/user/findAll.do"> <i
 							class="fa fa-circle-o"></i> 用户管理
-					</a></li>
-					<li id="system-setting"><a
+						</a>
+						</security:authorize>
+					</li>
+					<li id="system-setting">
+						<security:authorize access="hasRole('ADMIN')">
+						<a
 						href="${pageContext.request.contextPath}/role/findAll.do"> <i
 							class="fa fa-circle-o"></i> 角色管理
-					</a></li>
-					<li id="system-setting"><a
+						</a>
+						</security:authorize>
+					</li>
+					<li id="system-setting">
+						<security:authorize access="hasRole('ADMIN')">
+						<a
 						href="${pageContext.request.contextPath}/permission/findAll.do">
 							<i class="fa fa-circle-o"></i> 资源权限管理
 					</a></li>
 					<li id="system-setting"><a
-						href="${pageContext.request.contextPath}/sysLog/findAll.do"> <i
+						href="${pageContext.request.contextPath}/syslog/findAll.do"> <i
 							class="fa fa-circle-o"></i> 访问日志
-					</a></li>
+					</a>
+						</security:authorize>
+					</li>
 				</ul></li>
 			<li class="treeview"><a href="#"> <i class="fa fa-cube"></i>
 					<span>基础数据</span> <span class="pull-right-container"> <i

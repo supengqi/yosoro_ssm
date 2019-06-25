@@ -14,10 +14,9 @@
 	http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!-- 开启注解扫描，管理service和dao -->
-    <context:component-scan base-package="com.yosoro.ssm.dao">
+    <context:component-scan base-package="com.yosoro">
     </context:component-scan>
-    <context:component-scan base-package="com.yosoro.ssm.service">
-    </context:component-scan>
+
     <context:property-placeholder location="classpath:db.properties"/>
 
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">

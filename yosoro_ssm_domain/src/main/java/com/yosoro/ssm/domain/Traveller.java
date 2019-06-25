@@ -7,6 +7,7 @@ import java.io.Serializable;
  */
 public class Traveller implements Serializable {
 
+    private static final long serialVersionUID = 8091657269425097863L;
     private String id;
     private String name;
     private String sex;
